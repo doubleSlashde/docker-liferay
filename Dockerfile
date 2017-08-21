@@ -24,4 +24,5 @@ RUN echo -e '\nCATALINA_OPTS="$CATALINA_OPTS -Djava.security.egd=file:/dev/./ura
 COPY assets/supervisord.conf /etc/supervisord.conf
 COPY assets/init.sh /opt/liferay/init.sh
 VOLUME ["/opt/liferay"]
-EXPOSE 8080 CMD /usr/bin/supervisord -n
+EXPOSE 8080
+CMD /usr/bin/supervisord -n
